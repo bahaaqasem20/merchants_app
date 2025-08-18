@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:merchants_training/core/utils/app_assets.dart';
 import 'dart:async';
 
 class SplashViewBody extends StatefulWidget {
@@ -27,7 +28,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/images/logo.png',
+              AppAssets.logo,
               width: 150,
               height: 150,
             ),

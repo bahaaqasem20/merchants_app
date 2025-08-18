@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:merchants_training/core/utils/app_assets.dart';
 import 'package:merchants_training/core/utils/app_colors.dart';
 
 class LoginView extends StatelessWidget {
@@ -26,7 +27,7 @@ class LoginView extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("assets/images/residential.png", width: 180,),
+                  Image.asset(AppAssets.logo, width: 180,),
                   SizedBox(height: 40),
                   Text("تسجيل الدخول", style: TextStyle(color: AppColors.primaryLight, fontSize: 22, fontWeight: FontWeight.bold),),
                   SizedBox(height: 40),
