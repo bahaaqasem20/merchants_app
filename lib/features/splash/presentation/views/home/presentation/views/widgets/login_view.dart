@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:merchants_training/core/utils/app_assets.dart';
 import 'package:merchants_training/core/utils/app_colors.dart';
 
+import '../../../../../../../../core/utils/app_routes.dart';
+
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
@@ -69,16 +71,17 @@ class LoginView extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    if (_idController.text.isEmpty ||
-                        _passwordController.text.isEmpty) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('الرجاء إدخال جميع البيانات')),
-                      );
-                    } else {
+                    Navigator.pushNamed(context, AppRoutes.homeView);
 
-                      print('Email: ${_idController.text}');
-                      print('Password: ${_passwordController.text}');
-                    }
+                    // if (_idController.text.isEmpty ||
+                    //     _passwordController.text.isEmpty) {
+                    //   ScaffoldMessenger.of(context).showSnackBar(
+                    //     SnackBar(content: Text('الرجاء إدخال جميع البيانات')),
+                    //   );
+                    // } else {
+                    //   print('Email: ${_idController.text}');
+                    //   print('Password: ${_passwordController.text}');
+                    // }
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.primary,

@@ -15,14 +15,22 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/home_view');
+      Navigator.pushReplacementNamed(context, '/login_view');
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      width: double.infinity,
+      height: double.infinity,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Color(0xFF4B6CB7), Color(0xFF182848)],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

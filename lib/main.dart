@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: const [Locale('ar'), Locale('en')],
       locale: Locale('ar'),
       // initialRoute: AppRoutes.splash,
-      initialRoute: AppRoutes.homeView,
+      initialRoute: AppRoutes.splash,
       routes: AppRoutes.routes,
     );
   }
