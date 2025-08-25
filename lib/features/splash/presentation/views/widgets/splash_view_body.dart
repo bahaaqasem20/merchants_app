@@ -14,9 +14,13 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), (){
       Navigator.pushReplacementNamed(context, '/login_view');
     });
+
+    // Timer(const Duration(seconds: 3), () {
+    //   Navigator.pushReplacementNamed(context, '/login_view');
+    // });
   }
 
   @override

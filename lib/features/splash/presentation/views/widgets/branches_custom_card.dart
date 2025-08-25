@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_colors.dart';
 
-class CustomCard extends StatelessWidget {
-  final String partnerName;
-  final String position;
-  final String sharePercentage;
+class BranchesCustomCard extends StatelessWidget {
+  final String companyName;
+  final String status;
+  final String managerName;
 
-  const CustomCard({
+  const BranchesCustomCard({
     super.key,
-    required this.partnerName,
-    required this.position,
-    required this.sharePercentage,
+    required this.companyName,
+    required this.status,
+    required this.managerName,
   });
 
   @override
@@ -25,11 +25,11 @@ class CustomCard extends StatelessWidget {
         padding: const EdgeInsets.all(18),
         child: Column(
           children: [
-            _InfoRow(label: "الشريك", value: partnerName),
+            _InfoRow(label: "الشركة", value: companyName),
             const Divider(),
-            _InfoRow(label: "المنصب", value: position),
+            _InfoRow(label: "الحالة", value: status),
             const Divider(),
-            _InfoRow(label: "نسبة السهم", value: sharePercentage),
+            _InfoRow(label: "المدير", value: managerName),
           ],
         ),
       ),
