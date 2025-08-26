@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import '../../../../../core/utils/app_colors.dart';
 
 class CustomSection extends StatelessWidget {
   final String title;
+  final Widget destination;
 
   const CustomSection({
     super.key,
     required this.title,
+    required this.destination
   });
 
   @override
@@ -32,7 +34,9 @@ class CustomSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
             ),
           ),
-          onPressed: () {},
+          onPressed: () {
+              Get.to(() => destination);
+          },
           child: const Text(
             "المزيد",
             style: TextStyle(

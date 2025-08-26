@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:merchants_training/features/splash/presentation/views/widgets/partners_custom_card.dart';
 import '../../../../../../../../core/utils/app_colors.dart';
 import '../../../../../../../../core/utils/app_styles.dart';
-import '../../../../widgets/branches_custom_card.dart';
 
-class BranchesView extends StatelessWidget {
-  const BranchesView({super.key});
+class CompaniesView extends StatelessWidget {
+  const CompaniesView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class BranchesView extends StatelessWidget {
                       Get.back();
                     },
                   ),
-                  Text("الفروع", style: AppStyles.textStyleBold11),
+                  Text("الشركات", style: AppStyles.textStyleBold11),
                   const SizedBox(width: 28),
                 ],
               ),
@@ -42,28 +43,22 @@ class BranchesView extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              BranchesCustomCard(
-                companyName: "Top Tech",
-                status: "نشطة",
-                managerName: "محمد توفيق",
+              PartnersCustomCard(
+                partnerName: "محمد أحمد",
+                position: "رئيس مجلس الادارة",
+                sharePercentage: "50%",
               ),
               const SizedBox(height: 20),
-              BranchesCustomCard(
-                companyName: "Top Tech",
-                status: "نشطة",
-                managerName: "محمد توفيق",
+              PartnersCustomCard(
+                partnerName: "محمد أحمد",
+                position: "رئيس مجلس الادارة",
+                sharePercentage: "50%",
               ),
               const SizedBox(height: 20),
-              BranchesCustomCard(
-                companyName: "Top Tech",
-                status: "نشطة",
-                managerName: "محمد توفيق",
-              ),
-              const SizedBox(height: 20),
-              BranchesCustomCard(
-                companyName: "Top Tech",
-                status: "نشطة",
-                managerName: "محمد توفيق",
+              PartnersCustomCard(
+                partnerName: "محمد أحمد",
+                position: "رئيس مجلس الادارة",
+                sharePercentage: "50%",
               ),
             ],
           ),

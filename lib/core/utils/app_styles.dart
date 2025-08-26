@@ -25,6 +25,13 @@ abstract class AppStyles {
     color: AppColors.primaryLight,
   );
 
+  static const TextStyle textStyleBold12 = TextStyle(
+    fontFamily: 'bukra',
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    color: AppColors.primaryLight,
+  );
+
   static const TextStyle textStyleRegular10 = TextStyle(
     fontFamily: 'bukra',
     fontSize: 10,
