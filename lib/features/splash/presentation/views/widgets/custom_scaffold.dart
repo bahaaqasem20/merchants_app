@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:merchants_training/features/splash/presentation/views/home/presentation/views/widgets/companyServices_view.dart';
+import 'package:merchants_training/features/splash/presentation/views/home/presentation/views/widgets/roomServiceRequest_view.dart';
 import 'package:merchants_training/features/splash/presentation/views/widgets/welcome_card.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
@@ -52,9 +55,9 @@ class CustomScaffold extends StatelessWidget {
             const SizedBox(height: 20),
             ListTile(
               leading: Image.asset("assets/images/note.png", width: 32),
-              title: Text('طلب خدمات الغرفة', style: AppStyles.textStyleBold12),
+              title: Text('طلب خدمات الغرفة التجارية', style: AppStyles.textStyleBold12),
               onTap: () {
-                // Action
+                Get.to(RoomservicerequestView());
               },
             ),
             const SizedBox(height: 20),
@@ -62,7 +65,7 @@ class CustomScaffold extends StatelessWidget {
               leading: Image.asset("assets/images/category.png", width: 32),
               title: Text('قائمة خدمات الشركة', style: AppStyles.textStyleBold12),
               onTap: () {
-                // Action
+                Get.to(CompanyservicesView());
               },
             ),
             const SizedBox(height: 40),

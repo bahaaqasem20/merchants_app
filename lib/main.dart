@@ -39,7 +39,13 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
       ],
       supportedLocales: const [Locale('ar'), Locale('en')],
-      locale: Locale('ar'),
+      locale: const Locale('ar'),
+      builder: (context, child) {
+        return Directionality(
+          textDirection: TextDirection.rtl,
+          child: child!,
+        );
+      },
       // initialRoute: AppRoutes.splash,
       initialRoute: AppRoutes.splash,
       routes: AppRoutes.routes,
