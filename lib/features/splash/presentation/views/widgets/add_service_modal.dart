@@ -22,21 +22,32 @@ class AddServiceModal extends StatelessWidget {
               style: AppStyles.textStyleBold12.copyWith(fontSize: 18),
             ),
             const SizedBox(height: 20),
-            TextField(
+            DropdownButtonFormField<String>(
               decoration: const InputDecoration(
-                labelText: "اسم الخدمة",
                 border: OutlineInputBorder(),
               ),
+              items: const [
+                DropdownMenuItem(value: "خدمة 1", child: Text("خدمة 1", style: TextStyle(color: AppColors.primaryLight))),
+                DropdownMenuItem(value: "خدمة 2", child: Text("خدمة 2", style: TextStyle(color: AppColors.primaryLight))),
+                DropdownMenuItem(value: "خدمة 3", child: Text("خدمة 3", style: TextStyle(color: AppColors.primaryLight))),
+              ],
+              onChanged: (value) {
+              },
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.primary,
+            SizedBox(
+              width: double.infinity,
+              height: 44,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.primary2,
+
+                ),
+                child: const Text("حفظ", style: AppStyles.textStyleBold13),
               ),
-              child: const Text("حفظ", style: AppStyles.textStyleBold12),
             ),
           ],
         ),

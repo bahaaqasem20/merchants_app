@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:merchants_training/features/splash/presentation/views/widgets/companyService_custom_card.dart';
 
 import '../../../../../../../../core/utils/app_colors.dart';
 import '../../../../../../../../core/utils/app_styles.dart';
@@ -49,7 +49,9 @@ class _CompanyservicesViewState extends State<CompanyservicesView> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-
+              CompanyserviceCustomCard(serviceName: "برمجة تطبيقات", serviceDate: "20.10"),
+              SizedBox(height: 20),
+              CompanyserviceCustomCard(serviceName: "برمجة تطبيقات", serviceDate: "20.10"),
             ],
           ),
         ),
